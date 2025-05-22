@@ -170,9 +170,35 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2025 PionAI. Todos os direitos reservados.</p>
+      <nav class="footer-nav">
+        <a href="politica-privacidade.html" aria-label="Políticas de Privacidade">Políticas de Privacidade</a>
+      </nav>
     </div>
   </footer>
 
+  <div id="cookie-modal" class="cookie-modal" role="dialog" aria-label="Modal de Cookies">
+    <div class="cookie-modal-content">
+      <div class="cookie-modal-header">
+        <h3>Usamos Cookies</h3>
+        <button class="cookie-close" onclick="closeModal()" aria-label="Fechar Modal">&times;</button>
+      </div>
+      <div class="cookie-modal-body">
+        <p>Este site usa cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="politica-privacidade.html" class="privacy-link">Política de Privacidade</a>.</p>
+      </div>
+      <div class="cookie-modal-footer">
+        <button class="cookie-button accept" onclick="acceptCookies()" aria-label="Aceitar Cookies">Aceitar</button>
+        <button class="cookie-button reject" onclick="rejectCookies()" aria-label="Recusar Cookies">Recusar</button>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
+  <script>
+    // Mostrar banner de cookies imediatamente
+    document.addEventListener('DOMContentLoaded', function() {
+      const cookieBanner = document.getElementById('cookie-banner');
+      cookieBanner.classList.add('show');
+    });
+  </script>
 </body>
 </html>
